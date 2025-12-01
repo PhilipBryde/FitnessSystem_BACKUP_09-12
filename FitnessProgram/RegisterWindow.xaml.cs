@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace FitnessProgram;
+//Philip Kode 
 public partial class RegisterWindow : Window
 {
     private Fitness _fitness;
@@ -23,7 +24,7 @@ public partial class RegisterWindow : Window
         InitializeComponent();
         _fitness = fitness;
     }
-
+    
     private void Button_Create_Click(object sender, RoutedEventArgs e)
     {
         string name = NameInput.Text;

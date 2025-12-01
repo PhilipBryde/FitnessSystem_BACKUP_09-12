@@ -37,7 +37,7 @@ namespace FitnessProgram
             return memberList;
         }
 
-        // Login
+        // Login - Philip 
         public Member Authenticate(string username, string password)
         {
             if (!int.TryParse(password, out int id))
@@ -49,7 +49,7 @@ namespace FitnessProgram
         }
 
 
-        // REGISTER (opret nyt medlem)
+        // REGISTER (opret nyt medlem) - Philip
         public Member Register(string name, char gender, int age)
         {
             int newId = (memberList.Count > 0) ? memberList.Max(m => m.id) + 1 : 1;

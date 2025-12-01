@@ -17,6 +17,8 @@ namespace FitnessProgram
     /// <summary>
     /// Interaction logic for NextWindow.xaml
     /// </summary>
+    
+    //Sidney Kode
     public partial class NextWindow : Window
     {
         public NextWindow()
@@ -31,6 +33,7 @@ namespace FitnessProgram
             this.Close();
         }
 
+        //Sidney Kode
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             for(int i = 0; i < 1000; i++)
@@ -40,10 +43,19 @@ namespace FitnessProgram
             }
         }
 
+        //Sidney Kode
         private void GoToActivity_Click(object sender, RoutedEventArgs e)
         {
             MemberTestWindow test = new MemberTestWindow();
             test.Show();
+        }
+
+        //Philip Kode 
+        private void GoToMainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
         }
     }
 }
