@@ -17,12 +17,12 @@ namespace FitnessProgram;
 //Philip Kode 
 public partial class RegisterWindow : Window
 {
-    private Fitness fitness;
+    private Fitness _fitness;
 
     public RegisterWindow(Fitness fitness)
     {
         InitializeComponent();
-        fitness = fitness;
+        _fitness = fitness;
     }
     
     private void Button_Create_Click(object sender, RoutedEventArgs e)
@@ -35,8 +35,8 @@ public partial class RegisterWindow : Window
             return;
         }
 
-        Member newMember = fitness.Register(name, gender, age);
-        MessageBox.Show($"Bruger oprettet! ID = {newMember.id}");
+        Member newMember = _fitness.Register(name, gender, age);
+        MessageBox.Show($"Bruger oprettet! Dit ID og Adgangskode er {newMember.id}");
         this.Close();
     }
 }
