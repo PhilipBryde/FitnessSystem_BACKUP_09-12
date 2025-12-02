@@ -52,7 +52,7 @@ namespace FitnessProgram
         // --- Button: Open Activity Window --- philip
         private void GoToActivity_Click(object sender, RoutedEventArgs e)
         {
-            MemberTestWindow activity = new MemberTestWindow();
+            ActivityWindow activity = new ActivityWindow();
             activity.Show();
             this.Close();
         }
