@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         WindowState="Maximized"
         WindowStyle="SingleBorderWindow"
-        Title="NextWindow" Height="450" Width="800">
+        Title="NextWindow" Height="1080" Width="1920">
 
     <Grid Background="Black">
 
@@ -27,15 +27,15 @@
 
         <!-- Members Button -->
         <Button 
-            Grid.Row="0"
+            Grid.Row="2"
             Content="Members"
             x:Name="MemberButton"
             Width="100"
             Height="50"
             Background="LightGreen"
-            HorizontalAlignment="Right"
+            HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Margin="0,40,48,0"
+            Margin="800,0,0,0"
             Visibility="Collapsed"
             Click="GoToMembers_Click"/>
 
@@ -43,14 +43,14 @@
         <Button 
             Grid.Row="2"
             Width="120"
-            Height="50"
+            Height="65"
             FontSize="15"
             Background="LightBlue"
             x:Name="GoToActivity"
             Content="Team Activities"
             HorizontalAlignment="Center"
-            Margin="0,30,0,0"
-            VerticalAlignment="Top"
+            Margin="0,0,0,0"
+            VerticalAlignment="Center"
             Click="GoToActivity_Click"/>
 
         <!-- Back to menu Button -->
@@ -58,11 +58,11 @@
             Grid.Row="3"
             Background="Yellow"
             Content="Back to menu"
-            Width="80"
-            Height="40"
+            Width="100"
+            Height="50"
             VerticalAlignment="Center"
-            HorizontalAlignment="Right"
-            Margin="0,0,48,0"
+            HorizontalAlignment="Center"
+            Margin="800,0,0,0"
             Click="GoToMainWindow_Click"/>
 
     </Grid>
