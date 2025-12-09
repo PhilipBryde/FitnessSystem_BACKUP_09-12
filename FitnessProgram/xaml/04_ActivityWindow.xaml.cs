@@ -13,6 +13,7 @@ namespace FitnessProgram
     {
         private readonly Fitness fitness; // Shared fitness system
         private readonly Member member;   // Logged in user
+        public int newActCount = 0;
 
         // --- Constructor: MUST match Option 1 ---
         public ActivityWindow(Fitness fitness, Member member)
@@ -436,7 +437,7 @@ namespace FitnessProgram
         // Sidney
         private void CreateActivity_Click(object sender, RoutedEventArgs e) 
         {
-            string newActName = NewActivity?.Text.Trim() ?? string.Empty; //Brugerens input bliver sat i ind string der bruges senere
+            string newActName = NewActivity?.Text.Trim(); //Brugerens input bliver sat i ind string der bruges senere
 
             if (string.IsNullOrEmpty(newActName)) //if statement der kører så længe brugeren ikke skriver noget i TextBoxen
             {
@@ -444,10 +445,16 @@ namespace FitnessProgram
                 return; //Stopper her og springer resten af koden nedenunder over
             }
 
+            if(newActCount >= 1)
+            {
+                MessageBox.Show("Der kan ikke oprettes flere aktiviteter ligenu");
+                return;
+            }
             // Sidney 
             TextBlock block = new TextBlock(); //Opretter ny TextBlock med properties
             if (ActivityGrid != null)
             {
+                newActCount++;
                 Grid.SetRow(block, 1);
                 block.Foreground = Brushes.White;
                 block.FontWeight = FontWeights.Bold;

@@ -40,7 +40,7 @@ namespace FitnessProgram
 
             Member newMember = _fitness.Register(name, gender, age);
             SaveMemberToFile(newMember); //Kalder på metoden
-            MessageBox.Show($"Bruger oprettet! Dit ID og Adgangskode er {newMember.id}");
+            MessageBox.Show($"Bruger oprettet! \nDit Brugernavn er {newMember.name} \nDit Adgangskode er {newMember.id}");
             this.Close();
         }
 
