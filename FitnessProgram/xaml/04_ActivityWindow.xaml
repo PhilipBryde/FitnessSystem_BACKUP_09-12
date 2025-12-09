@@ -188,6 +188,9 @@
            Margin="549,459,0,0" 
            RenderTransformOrigin="0.379,8.942"
            />
+        <TextBlock x:Name="extraAct" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="55,338,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock x:Name="extraAct1" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="255,346,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
         <!-- Text blocks-->
         
         <!-- Philip xaml code -->

@@ -99,7 +99,7 @@
                 Background="LightGreen"
                 Foreground="Black"
                 Margin="0,-17,0,0"
-                Click="Button_Click"/>
+                Click="Login_Click"/>
         </StackPanel>
 
         <!-- text til oprettelse af ny bruger -->
@@ -120,7 +120,7 @@
             FontSize="11"
             Background="LightBlue"
             Foreground="Black"
-            Margin="0,215,0,0" Click="Button_Register_Click"/>
+            Margin="0,215,0,0" Click="Register_Click"/>
         
 <!-- Philip xaml code  -->
 

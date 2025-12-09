@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
+using System.IO;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
@@ -92,6 +93,17 @@ namespace FitnessProgram
                     localMembers[9] + Environment.NewLine +
                     localMembers[13];
             }
+
+            if (localActivities.Count > 5 && extraAct != null)
+            {
+                extraAct.Text = localActivities[5].ToUpper();
+            }
+
+            if (localActivities.Count > 6 && extraAct1 != null)
+            {
+                extraAct1.Text = localActivities[6].ToUpper();
+            }
+            
         }
         // Sidney Kode
 
@@ -198,7 +210,8 @@ namespace FitnessProgram
                 3 => Spinning,
                 4 => Pilates,
                 5 => Crossfit,
-                _ => null
+                6 => extraAct,
+                7 => extraAct1,
             };
 
             if (target == null) return;
@@ -284,7 +297,8 @@ namespace FitnessProgram
                 3 => Spinning,
                 4 => Pilates,
                 5 => Crossfit,
-                _ => null
+                6 => extraAct,
+                7 => extraAct1,
             };
 
             if (target == null) return;
@@ -349,7 +363,8 @@ namespace FitnessProgram
                 3 => Spinning,
                 4 => Pilates,
                 5 => Crossfit,
-                _ => null
+                6 => extraAct,
+                7 => extraAct1,
             };
 
             if (target == null) return;
@@ -446,13 +461,14 @@ namespace FitnessProgram
                 return; //Stopper her og springer resten af koden nedenunder over
             }
 
-            if(newActCount >= 1)
+            if(newActCount >= 2)
             {
                 MessageBox.Show("Der kan ikke oprettes flere aktiviteter ligenu");
                 return;
             }
             // Sidney 
             TextBlock block = new TextBlock(); //Opretter ny TextBlock med properties
+            string filePath = @"ActivityList.txt";
             if (ActivityGrid != null)
             {
                 newActCount++;
@@ -466,7 +482,9 @@ namespace FitnessProgram
 
                 block.Text = newActName.ToUpper(); 
                 ActivityGrid.Children.Add(block);
+                File.AppendAllText(filePath, Environment.NewLine + newActName);
                 MessageBox.Show($"Aktivitet {newActName} oprettet");
+                ShowActivity();
                 UpdateAllCapacities();
             }
         }

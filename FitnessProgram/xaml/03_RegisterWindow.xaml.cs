@@ -58,7 +58,7 @@ namespace FitnessProgram
         {
             string filePath = @"MemberList.txt"; //Gemmer stien til textfilen
             string m = $"ID: {member.id}, Navn: {member.name}, Køn: {member.gender}"; //Opretter ny string med medlemmets infomation
-            File.AppendAllText(filePath, Environment.NewLine + m + Environment.NewLine); //Bliver gemt i filen
+            File.AppendAllText(filePath, Environment.NewLine + m); //Bliver gemt i filen
 
         }
     }

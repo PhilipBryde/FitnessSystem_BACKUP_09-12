@@ -21,7 +21,7 @@ namespace FitnessProgram
         }
 
         // --- LOGIN BUTTON --- Philip
-        public void Button_Click(object sender, RoutedEventArgs e)
+        public void Login_Click(object sender, RoutedEventArgs e)
         {
             string username = UsernameInput.Text.Trim();
             string password = PasswordInput.Password.Trim();
@@ -49,7 +49,7 @@ namespace FitnessProgram
         }
 
         // --- REGISTER BUTTON --- Philip
-        private void Button_Register_Click(object sender, RoutedEventArgs e)
+        private void Register_Click(object sender, RoutedEventArgs e)
         {
             RegisterWindow reg = new RegisterWindow(_fitness);
             reg.ShowDialog();
